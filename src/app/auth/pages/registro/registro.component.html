@@ -1,0 +1,41 @@
+<div class="row row-img-registrarse vh-100 w-100 m-0">
+
+  <div class="col-img col-12 col-lg-8 d-flex justify-content-center align-items-center">
+    <img class="img-fluid" src="assets/img2.png" alt="">
+  </div>
+
+  <div class="col-registrarse col-12 col-lg-4 p-0 d-flex justify-content-center">
+    <form class="p-3" [formGroup]="formRegistro" (ngSubmit)="registrar()">
+      <h1 class="text-center">Registrarse</h1>
+      <div class="text-center"><input type="text"
+        placeholder="Nombres"
+        formControlName="nombres"
+        name="" id=""></div>
+      <div class="text-center"><input type="text"
+        placeholder="Cedula"
+        formControlName="cedula"
+        name="cedula" id=""></div>
+      <div class="text-center"><input type="email"
+        placeholder="Email"
+        formControlName="email"
+        name="" id=""></div>
+      <div class="text-center"><input type="password"
+        placeholder="Password"
+        formControlName="pass1"
+        name="pass1" id=""></div>
+      <div class="text-center"><input type="password"
+        placeholder="Repetir Password"
+        formControlName="pass2"
+        name="pass2" id=""></div>
+      <div class="text-center">
+        <select name="sexo" formControlName="sexo">
+          <option *ngFor="let item of list" [value]="item">{{item}}</option>
+        </select>
+      </div>
+      <div class="text-center"><button type="submit">Registrar</button></div>
+      <div class="text-center mt-2">
+        <small>Ya tienes cuenta? </small> <a href="/auth/login">Login</a>
+      </div>
+    </form>
+  </div>
+</div>

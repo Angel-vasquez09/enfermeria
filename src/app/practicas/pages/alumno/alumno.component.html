@@ -1,0 +1,21 @@
+
+<app-header></app-header>
+<section class="row m-0 position-relative">
+  <!-- Redireccionar Pagina -->
+  <app-link class="position-absolute"></app-link>
+
+  <div class="col-12 col-lg-8 ">
+    <app-list-student
+    [listStudiantes]="practica"
+    class="w-100 h-100 d-flex flex-column justify-content-center align-items-center"></app-list-student>
+  </div>
+
+  <div class="col-12 col-lg-4 position-relative">
+
+    <app-promocion-prevencion
+    [practica]="practica"
+      class="w-100 h-100 d-flex justify-content-center align-items-center">
+    </app-promocion-prevencion>
+  </div>
+
+</section>

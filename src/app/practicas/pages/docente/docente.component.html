@@ -1,0 +1,21 @@
+<!-- Si esta logueado mostramos el nombre -->
+<app-header></app-header>
+
+
+<section class="row m-0">
+
+  <div class="col-12 col-lg-8 ">
+    <app-list-practicas
+    [itemPracticas]="practicas"
+    class="w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+
+    </app-list-practicas>
+  </div>
+
+<div class="col-12 col-lg-4 position-relative">
+
+  <app-promocion-prevencion
+    class="w-100 h-100 d-flex justify-content-center align-items-center">
+  </app-promocion-prevencion>
+</div>
+</section>

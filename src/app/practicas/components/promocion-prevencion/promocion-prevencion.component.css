@@ -1,0 +1,28 @@
+.info{
+  width: 90%;
+  height: 60%;
+  border-radius: 10px;
+  margin: 0;
+  box-shadow: 5px 5px 10px #ebebeb, -5px -5px 10px #ebebeb;
+}
+h3{
+  font-size: 20px;
+  font-weight: normal;
+}
+h4{
+  font-size: 25px;
+}
+h4 strong{
+  font-weight: normal;
+  font-size: 20px;
+}
+
+@media screen and (max-width:992px) {
+  .info{
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+    height:auto !important;
+    width: 99%;
+    padding: .5rem;
+  }
+}

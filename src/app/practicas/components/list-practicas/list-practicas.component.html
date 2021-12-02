@@ -1,0 +1,23 @@
+<div class="practicas">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Codigo</th>
+        <th scope="col">Practica</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let practica of itemPracticas[0]"
+          (click)="detallePractica(practica.id)"
+          class="fila fila{{ practica.id }}">
+        <td>{{ practica.id }}</td>
+        <td>{{ practica.nombre }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="btn-acceder">
+  <button type="button" (click)="pagina_alumnos()"
+          [class.disabled]="disabled"
+          class="btn btn-outline-success">Acceder</button>
+</div>

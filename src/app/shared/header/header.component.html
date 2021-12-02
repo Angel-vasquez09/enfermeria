@@ -1,0 +1,19 @@
+<header class="d-flex">
+
+  <div class="header-content-1 col-12 col-lg-5 d-flex justify-content-between">
+    <div class="d-flex  align-items-center position-relative h-100">
+      <img src="assets/logo.svg" alt="" class="mr-3">
+      <h2 class="text-center text-white m-0">Nursing Nuñez</h2>
+    </div>
+    <i  (click)="close()" class="fas fa-bars pl-3" style="padding-right: .5rem;"></i>
+  </div>
+
+  <div #cerrar class="header-content-2 col-lg-7 d-flex">
+    <ul [class.d-none]="!login" class="m-0 header-content-d w-100 d-flex justify-content-end align-items-center p-3">
+      <strong class="iniciales">{{ nameDoncente[0]  }}</strong>
+    </ul>
+    <strong [class.d-none]="!login" (click)="logout()" class="close p-2 d-flex align-items-center">
+      <i class="fas fa-sign-out-alt"></i>
+    </strong>
+  </div>
+</header>

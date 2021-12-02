@@ -1,0 +1,18 @@
+.add-practicas{
+  height:auto;
+  min-height:100vh;
+}
+
+.newPractica{
+  width: 90%;
+  margin: auto;
+  border: 1px solid black;
+  height: auto;
+}
+
+
+@media screen and (max-width: 600px) {
+  #file{
+    font-size: 9px !important;
+  }
+}

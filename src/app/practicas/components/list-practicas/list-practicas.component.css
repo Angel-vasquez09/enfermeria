@@ -1,0 +1,60 @@
+.practicas{
+  width: 80%;
+  max-height: 450px;
+  border-radius: 10px;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  padding: 10px;
+  box-shadow: 5px 5px 10px #ebebeb, -5px -5px 10px #ebebeb;
+}
+
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+.practicas::-webkit-scrollbar {
+  -webkit-appearance: none;
+  padding: 0px;
+}
+
+.practicas::-webkit-scrollbar:vertical {
+  width:10px;
+  padding: 0;
+}
+
+.practicas::-webkit-scrollbar-button:increment,.practicas::-webkit-scrollbar-button {
+  display: none;
+  padding: 0;
+}
+
+.practicas::-webkit-scrollbar:horizontal {
+  height: 10px;
+  padding: 0;
+}
+
+.practicas::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+  padding: 0 !important;
+}
+
+.practicas::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.btn-acceder{
+  width:80%;
+  text-align:end;
+  margin-top: 25px;
+}
+
+.fila{
+  cursor: pointer;
+}
+
+@media screen and (max-width:992px) {
+  .practicas{
+    width:100%;
+    margin-top: 3rem;
+  }
+}

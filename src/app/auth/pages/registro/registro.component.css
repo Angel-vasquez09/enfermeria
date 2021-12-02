@@ -1,0 +1,58 @@
+a{
+  text-decoration: none;
+  font-weight: bold;
+  font-family: var(--raleway);
+}
+small{
+  font-family: var(--raleway);
+}
+h1{
+  font-family: var(--raleway);
+  font-weight: bold;
+  color:rgba(212, 212, 212, 1);
+}
+
+
+form{
+  width: 90%;
+}
+
+form input{
+  outline-color: var(--orange);
+  height:3rem;
+  width: 90%;
+  padding-left: 1rem;
+  margin-top: 1rem;
+  border: 1px solid rgba(212, 212, 212, 1);
+}
+form select{
+  outline-color: var(--orange);
+  height:3rem;
+  width: 90%;
+  padding-left: 1rem;
+  margin-top: 1rem;
+  border: 1px solid rgba(212, 212, 212, 1);
+}
+
+form button{
+  width: 90%;
+  border: 1px solid;
+  height: 3rem;
+  background: var(--black-primary);
+  color: white;
+  margin-top: 1rem;
+}
+
+
+@media screen  and (max-width:992px){
+  .row-img-registrarse{
+    height: auto !important;
+  }
+  .col-img{
+    margin-top: 1.5rem !important;
+  }
+  .col-registrarse{
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+}

@@ -1,0 +1,88 @@
+<app-header></app-header>
+<div class=" add-practicas">
+  <h1 class="text-center">Agregar nueva practica</h1>
+  <div class="newPractica">
+    <form [formGroup]="form" (ngSubmit)="onSubmit($event)" class="p-4">
+      <div class="form-group">
+        <input  type="text" class="form-control"
+                id="nombre"
+                name="nombre"
+                formControlName="nombre"
+                placeholder="Nombre de practica">
+      </div>
+      <hr>
+      <!-- SEMESTRES QUE TRABAJAN ESTA PRACTICA -->
+      <div class="form-group d-flex flex-wrap border p-2">
+        <label for="semestre">Semestres Practica</label>
+        <select class="form-select form-select-sm"
+                (change)="addNotas($event)"
+                aria-label=".form-select-sm example">
+          <option selected>Semestres</option>
+          <option value="1">Semestre 1</option>
+          <option value="2">Semestre 2</option>
+          <option value="3">Semestre 3</option>
+          <option value="4">Semestre 4</option>
+          <option value="5">Semestre 5</option>
+          <option value="6">Semestre 6</option>
+          <option value="7">Semestre 7</option>
+          <option value="8">Semestre 8</option>
+          <option value="9">Semestre 9</option>
+        </select>
+        <div class="d-flex flex-wrap p-2">
+          <strong class="m-2" *ngFor="let item of cantidadSems">
+            Sems{{ item }}<small>
+              <i  class="fas fa-times-circle"
+                  (click)="deleteS(item)"
+                  style="cursor: pointer;"></i>
+            </small>
+          </strong>
+        </div>
+      </div>
+
+      <!-- SEMESTRES QUE TRABAJAN ESTA PRACTICA -->
+      <hr>
+      <!-- ESTUDIANTES DE ESTA PRACTICA -->
+      <div class="d-flex flex-column align-items-center border p-2">
+        <h5 class="text-center">Seleccionar practica</h5>
+        <div class="m-2 d-flex flex-column">
+          <label for="estudiantes">Practica</label>
+          <input  type="file"
+                  id="file"
+                  #readexcel="readexcel"
+                  (eventEmitter)="DataEventEmiter($event)"
+                  appExcel />
+        </div>
+      </div>
+
+      <div class="p-2 w-100 row border m-2">
+        <h4 class="text-center">Guia para importar bien el archivo XLSX</h4>
+        <div class="col-12 col-md-4" >
+          <img  src="assets/img/estudiantes.jpg"
+          width="100%"
+          style="border: 5px solid red"
+          height="90%"alt="">
+        </div>
+        <div class="col-12 col-md-4">
+          <img  src="assets/img/notas.jpg"
+                width="100%"
+                style="border: 5px solid red"
+                height="90%"alt="">
+        </div>
+        <div class="col-12 col-md-4">
+          <img  src="assets/img/profesores.jpg"
+                width="100%"
+                style="border: 5px solid red"
+                height="90%"alt="">
+        </div>
+
+
+
+      </div>
+      <!-- ESTUDIANTES DE ESTA PRACTICA -->
+
+      <div class="text-center m-2">
+        <button type="submit" class="btn btn-primary">Guardar Practica</button>
+      </div>
+    </form>
+  </div>
+</div>

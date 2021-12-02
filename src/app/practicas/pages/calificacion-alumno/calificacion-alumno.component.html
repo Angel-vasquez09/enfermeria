@@ -1,0 +1,64 @@
+<app-header></app-header>
+<section class="row m-0 position-relative">
+  <!-- Redireccionar -->
+  <app-link ></app-link>
+
+  <div class="columna1 col-12 col-lg-7">
+    <strong class="fon-family ml-m-2">Alumno</strong>
+    <h1 class="m-0 pl-m-2">{{ estudiante[0].nombresApellidos }}</h1>
+
+    <!--? FORMULARIO DE NOTAS -->
+    <form [formGroup]="formNotas" (ngSubmit)="submit()" class="mt-4 mb-2">
+      <div formArrayName="notas">
+
+        <div class="text-center position-relative" *ngFor="let nota of notasPractica; let i = index">
+          <input  type="text"
+                  id="{{ nota.notax }}"
+                  [readonly]="nota.cedulaDocenteEncargado !== idProAuth ? true : false"
+                  [placeholder]="nota.notax"
+                  [value]="nota.calificacion"
+                  >
+          <i class="fas fa-unlock m-4" [class.d-none]="nota.cedulaDocenteEncargado !== idProAuth"></i>
+          <i class="fas fa-lock m-4" [class.d-none]="nota.cedulaDocenteEncargado === idProAuth"></i>
+          <small class="fon-family">{{ nota.porcentaje }}%</small>
+        </div>
+
+      </div>
+
+      <div class="d-flex justify-content-end" style="width:80%">
+        <button type="submit" class="btn-1">Guardar</button>
+        <button class="btn-2">Cancelar</button>
+      </div>
+    </form>
+    <!--? FORMULARIO DE NOTAS -->
+
+  </div>
+
+  <div class=" col-12 col-lg-5 d-flex flex-column">
+    <div class="img-prom col d-flex flex-column justify-content-center align-items-center">
+      <img  src="https://icon-library.com/images/avatar-icon-images/avatar-icon-images-4.jpg" alt="">
+      <strong class="fon-family fon-size">c.c {{ estudiante[0].cedula }}</strong>
+    </div>
+    <div class=" img-prom col d-flex flex-column justify-content-center align-items-center">
+      <strong class="fon-family fon-size">Promedio</strong>
+      <div class="promedio">2,7</div>
+    </div>
+  </div>
+</section>
+
+
+<!--  <div class="text-center">
+        <input type="text" name="" id="" placeholder="Nota 1">
+        <i class="fas fa-unlock m-4"></i>
+        <small class="fon-family">30%</small>
+      </div>
+      <div class="text-center">
+        <input type="text" name="" id="" placeholder="Nota 2">
+        <i class="fas fa-lock m-4"></i>
+        <small class="fon-family">25%</small>
+      </div>
+      <div class="text-center">
+        <input type="text" name="" id="" placeholder="Nota 3">
+        <i class="fas fa-lock m-4"></i>
+        <small class="fon-family">45%</small>
+      </div> -->
