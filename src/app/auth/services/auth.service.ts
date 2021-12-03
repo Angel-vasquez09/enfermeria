@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { of, Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
+import Swal from 'sweetalert2'
 
 @Injectable({
   providedIn: 'root'
@@ -34,6 +35,11 @@ export class AuthService {
       }
     },(err:any) => {
       console.log(err)
+      Swal.fire(
+        'Error!',
+        'Algo salio mal!, Verifique correo / password',
+        'error'
+      )
     })
   }
 
